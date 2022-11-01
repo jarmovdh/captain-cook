@@ -1,0 +1,56 @@
+h3{
+	color: #FFF;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+
+.planner-container{
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.card{
+	align-items: center;
+	background-color: #EFEFEF;
+	display: flex;
+	gap: 20px;
+	margin-top: 10px;
+}
+
+.card-info{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex: 2 1;
+	gap: 40px;
+
+}
+
+.card-portion{
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px;
+	gap: 20px;
+}
+
+.meal-img{
+	height: 200px;
+}
+
+#add-button {
+	background-color: #EFEFEF;
+	border:none;
+	cursor: pointer;
+	margin-top: 10px;
+	width: 100%;
+}
+
+#remove-button {
+	background-color: #EFEFEF;
+	border-radius: 14px;
+	border: 2px solid #C4C4C4;
+	cursor: pointer;
+	width: 50px;
+}

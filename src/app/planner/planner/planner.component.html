@@ -1,0 +1,14 @@
+<div class="planner-container">
+	<div class="card" *ngFor="let item of meals; let myIndex=index">
+		<div class="card-info">
+		<img class="meal-img" src='{{item.url}}' alt="meal">
+		<h2>{{item.name}}</h2>
+		</div>
+	  <div class="card-portion">
+		<h3>{{item.portion}}</h3>
+			<button id="remove-button" (click)="deleteMeals(item.id)"><h3>X</h3></button>
+		</div>
+	</div>
+	<button id="add-button" (click)="updateMeals()"><h3>+</h3></button>
+</div>
+

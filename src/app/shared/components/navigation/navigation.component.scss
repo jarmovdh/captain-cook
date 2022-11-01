@@ -1,0 +1,49 @@
+
+
+header{
+	background-color: #EFEFEF;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+
+h1{
+	color: #696969;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.menu-block{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #C4C4C4;
+	height:100%;
+	width: 100px;
+}
+
+.menu-list{
+	display: none;
+	background-color: white;
+	position:absolute;
+	right:0;
+	top: 50px;
+	width: 250px;
+	border: 1px #EFEFEF solid;
+}
+
+.active .menu-list{
+	display:block;
+}
+
+.menu-items{
+	padding: 20px 5px;
+	
+}
+.menu-item{
+	height:30px;
+}
