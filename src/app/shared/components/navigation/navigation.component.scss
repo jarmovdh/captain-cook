@@ -1,14 +1,14 @@
 
 
 header{
-	background-color: #EFEFEF;
-	height: 50px;
-	display: flex;
 	align-items: center;
+	background-color: #EFEFEF;
+	display: flex;
+	height: 50px;
+	padding: 20px;
 	justify-content: space-between;
 	width: 100%;
 }
-
 
 
 h1{
@@ -17,33 +17,35 @@ h1{
 	font-weight: bold;
 }
 
+ul{
+	width: 100%;
+}
+
+li{
+	cursor:pointer;
+	padding: 20px;
+	border: 1px #EFEFEF solid;
+}
+
 .menu-block{
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #C4C4C4;
 	height:100%;
 	width: 100px;
 }
 
-.menu-list{
+.menu-items{
 	display: none;
 	background-color: white;
 	position:absolute;
 	right:0;
 	top: 50px;
 	width: 250px;
-	border: 1px #EFEFEF solid;
 }
 
-.active .menu-list{
-	display:block;
-}
+.menu-items.active{
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+	display: block;
 
-.menu-items{
-	padding: 20px 5px;
-	
-}
-.menu-item{
-	height:30px;
 }
