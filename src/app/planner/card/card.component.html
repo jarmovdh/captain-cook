@@ -1,10 +1,10 @@
 <div class="card" >
 		<div class="card-info">
-		<img class="meal-img" src='{{url}}' alt="meal">
+		<img class="meal-img" [src]="url" alt="meal">
 		<h2><ng-content></ng-content></h2>
 		</div>
 	  <div class="card-portion">
 		<h3>{{portion}}</h3>
-			<button id="remove-button" (click)="deleteMeals(id)"><h3>X</h3></button>
+			<app-button [isFluid]="false" (click)="deleteMeal(id)" text="x"></app-button>
 		</div>
 	</div>

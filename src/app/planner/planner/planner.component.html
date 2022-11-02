@@ -1,13 +1,12 @@
 <div class="planner-container">
 	<app-card 
-	*ngFor="let item of meals; let myIndex=index" 
+	*ngFor="let item of meals;" 
 	[id]="item.id" 
 	[name]="item.name" 
 	[portion]="item.portion" 
 	[url]="item.url"
-	(delete)="deleteMeals(item.id)">{{item.name}}
+	(delete)="deleteMeal(item.id)">{{item.name}}
 	</app-card>
-	<button id="add-button" (click)="updateMeals()"><h3>+</h3></button>
-	<app-button (add)="updateMeals()"></app-button>
+	<app-button [isFluid]="true" (click)="updateMeals()" text="+"></app-button>
 </div>
 

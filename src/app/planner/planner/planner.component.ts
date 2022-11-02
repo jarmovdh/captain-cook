@@ -23,7 +23,7 @@ export class PlannerComponent implements OnInit {
     this.meals.push(this.meals[0])
   }
 
-  deleteMeals = (id: number) => {
+  deleteMeal = (id: number) => {
     this.meals = this.meals.filter(item => item.id !== id)
   }
 

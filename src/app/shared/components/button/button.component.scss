@@ -1,7 +1,28 @@
-#add-button {
+span{
+	color: #FFF;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.add-button {
 	background-color: #EFEFEF;
 	border:none;
-	cursor: pointer;
 	margin-top: 10px;
 	width: 100%;
+	align-items: center;
+}
+.add-button:hover{
+	background-color: #cdcdcd;
+}
+
+.remove-button {
+	background-color: #EFEFEF;
+	border-radius: 14px;
+	border: 2px solid #C4C4C4;
+	cursor: pointer;
+	width: 50px;
+}
+
+.remove-button:hover{
+	background-color: #cdcdcd;
 }

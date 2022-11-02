@@ -11,10 +11,10 @@ export class CardComponent implements OnInit {
   @Input() name!: string;
   @Input() portion!: string;
   @Input() url!: string;
-
+  
   @Output()
   delete = new EventEmitter();
-  deleteMeals(id: number) {
+  deleteMeal(id: number) {
     this.delete.emit(id)
   }
   constructor() { }
