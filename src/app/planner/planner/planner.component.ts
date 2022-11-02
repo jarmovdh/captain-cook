@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-//  interface MealType {
-//   id: number,
-//   name: string,
-//   portion: string,
-//   url: string,
-  
-// }
 
 @Component({
   selector: 'app-planner',
@@ -31,7 +24,6 @@ export class PlannerComponent implements OnInit {
   }
 
   deleteMeals = (id: number) => {
-
     this.meals = this.meals.filter(item => item.id !== id)
   }
 
