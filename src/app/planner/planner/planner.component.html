@@ -8,5 +8,6 @@
 	(delete)="deleteMeals(item.id)">{{item.name}}
 	</app-card>
 	<button id="add-button" (click)="updateMeals()"><h3>+</h3></button>
+	<app-button (add)="updateMeals()"></app-button>
 </div>
 
