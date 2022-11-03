@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 
 @NgModule({
   declarations: [
     ButtonComponent,
-    NavigationComponent
+    NavigationComponent,
+    DropdownComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
   ],
   exports: [
     ButtonComponent,
-    NavigationComponent
+    NavigationComponent,
+    DropdownComponent
   ]
 })
 export class SharedModule { }

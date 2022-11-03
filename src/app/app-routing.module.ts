@@ -5,7 +5,7 @@ import { PlannerComponent } from './planner/planner/planner.component';
 import { RecipesComponent } from './recipes/recipes/recipes.component';
 
 const routes: Routes = [
-  { path: 'planner', component: PlannerComponent },
+  { path: '', component: PlannerComponent },
   { path: 'recipes', component: RecipesComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
