@@ -7,7 +7,7 @@
 >
   <img src="../../../../assets/icons/hamburger.svg" alt="menu-button" />
 </button>
-<div class="dropdown-menu" [ngClass]="{ close: !isOpen }">
+<div class="dropdown-menu" [ngClass]="{ close: !isOpen }" (keydown.Esc)="toggleMenu()">
   <ul
     id="menu1"
     role="menu"
@@ -21,7 +21,6 @@
       *ngFor="let item of items"
       (click)="toggleMenu()"
       class="menu-item"
-      (keydown)="onKeydown($event)"
     >
       <a [routerLink]="item.routerlink">{{ item.text }}</a>
     </li>
