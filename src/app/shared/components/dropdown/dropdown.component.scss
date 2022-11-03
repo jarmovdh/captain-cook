@@ -9,13 +9,13 @@ li{
 }
 
 .backdrop{
-	background-color: rgba(67, 67, 67, 0.43);
+	background-color: rgba(48, 47, 47, 0.43);
 	cursor: pointer;
 	height: 100%;
-	opacity: 0.8;
+	left:0;
 	position: fixed;
 	top: 50px;
-	width: 100%;
+	width: 100vw;
 }
 
 .dropdown-menu{
@@ -26,6 +26,10 @@ li{
 	top: 50px;
 	width: 250px;
 	z-index: 1;
+}
+
+.close{
+	display: none;
 }
 
 @media only screen and (max-width: 768px) {
