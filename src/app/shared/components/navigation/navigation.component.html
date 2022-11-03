@@ -1,12 +1,12 @@
 <header>
 <h1>Captain Cook</h1>
 <div class="menu-block">
-	<p>menu</p>
+	<button (click)="toggleMenu()"><img src="../../../../assets/icons/hamburger.svg" alt=""></button>
 </div>
 </header>
-<div class="menu-list">
-	<ul class="menu-items">
-		<li class="menu-item">Recepten</li>
-		<li class="menu-item">Planner</li>
+<div [ngClass]="{active: isOpen}" class="menu-items">
+	<ul>
+		<li class="menu-item"><a [routerLink]="['/planner']">Planner</a></li>
+		<li class="menu-item"><a [routerLink]="['/recipes']">Recipes</a></li>
 	</ul>
 </div>
