@@ -1,8 +1,30 @@
-<button (click)="toggleMenu()"><img src="../../../../assets/icons/hamburger.svg" alt=""></button>
-<div class="dropdown-menu" [ngClass]="{close: !isOpen}">
-	<ul>
-		<li (click)="toggleMenu()" class="menu-item"><a routerLink="/planner">Planner</a></li>
-		<li (click)="toggleMenu()" class="menu-item"><a routerLink="/recipes">Recipes</a></li>
-	</ul>
+<button
+  type="button"
+  id="menubutton1"
+  aria-haspopup="true"
+  aria-controls="menu1"
+  (click)="toggleMenu()"
+>
+  <img src="../../../../assets/icons/hamburger.svg" alt="menu-button" />
+</button>
+<div class="dropdown-menu" [ngClass]="{ close: !isOpen }">
+  <ul
+    id="menu1"
+    role="menu"
+    tabindex="-1"
+    aria-labelledby="menubutton1"
+    aria-activedescendant="mi1"
+  >
+    <li
+      role="menuitem"
+      [id]="item.id"
+      *ngFor="let item of items"
+      (click)="toggleMenu()"
+      class="menu-item"
+      (keydown)="onKeydown($event)"
+    >
+      <a [routerLink]="item.routerlink">{{ item.text }}</a>
+    </li>
+  </ul>
 </div>
-<div (click)="toggleMenu()" [ngClass]="{close: !isOpen}" class="backdrop"></div>
+<div (click)="toggleMenu()" [ngClass]="{ close: !isOpen }" class="backdrop"></div>
