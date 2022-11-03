@@ -1,0 +1,40 @@
+ul{
+	width: 100%;
+}
+
+li{
+	cursor:pointer;
+	padding: 20px;
+	border: 1px #EFEFEF solid;
+}
+
+.backdrop{
+	background-color: rgba(48, 47, 47, 0.43);
+	cursor: pointer;
+	height: 100%;
+	left:0;
+	position: fixed;
+	top: 50px;
+	width: 100vw;
+}
+
+.dropdown-menu{
+	background-color: white;
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+	position:absolute;
+	right:0;
+	top: 50px;
+	width: 250px;
+	z-index: 1;
+}
+
+.close{
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .dropdown-menu {
+		width: 100vw;
+  }
+
+}

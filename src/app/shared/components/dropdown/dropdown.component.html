@@ -1,0 +1,8 @@
+<button (click)="toggleMenu()"><img src="../../../../assets/icons/hamburger.svg" alt=""></button>
+<div class="dropdown-menu" [ngClass]="{close: !isOpen}">
+	<ul>
+		<li (click)="toggleMenu()" class="menu-item"><a routerLink="/planner">Planner</a></li>
+		<li (click)="toggleMenu()" class="menu-item"><a routerLink="/recipes">Recipes</a></li>
+	</ul>
+</div>
+<div (click)="toggleMenu()" [ngClass]="{close: !isOpen}" class="backdrop"></div>
