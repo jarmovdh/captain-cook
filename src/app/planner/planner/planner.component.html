@@ -1,12 +1,15 @@
 <div class="planner-container">
-	<app-card 
-	*ngFor="let item of meals;" 
-	[id]="item.id" 
-	[name]="item.name" 
-	[portion]="item.portion" 
-	[url]="item.url"
-	(delete)="deleteMeal(item.id)">{{item.name}}
-	</app-card>
-	<app-button [isFluid]="true" (click)="updateMeals()" text="+"></app-button>
+  <div class="planner-wrapper">
+    <app-card
+      *ngFor="let item of plannedMeals"
+      [id]="item.id"
+      [name]="item.name"
+      [portion]="item.portion"
+      [url]="item.url"
+      (delete)="deleteMeals(item.id)"
+      >{{ item.name }}
+    </app-card>
+    <app-button [isFluid]="true" (click)="updateMeals()" text="+"></app-button>
+  </div>
+  <app-aside></app-aside>
 </div>
-
