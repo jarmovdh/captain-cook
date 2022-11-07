@@ -43,22 +43,26 @@ export class PlannedService {
     },
   ];
 
+  groceryList = this.plannedMeals.map((entry) => entry.ingredients).flat();
+
   $updatedPlannedMeals = of(this.plannedMeals);
+  $updatedGroceryList = of(this.groceryList);
 
   getPlannedMeals() {
     return this.plannedMeals;
   }
 
   deleteMeals(id: number) {
-    this.plannedMeals = this.plannedMeals.filter((item) => item.id !== id);
+    const deletedMeal = this.plannedMeals.findIndex((item) => item.id === id);
+    this.plannedMeals.splice(deletedMeal, 1);
   }
 
   updateMeals() {
     this.plannedMeals.push({
       id: Math.random(),
-      name: "test",
-      portion: "test",
-      url: "test",
+      name: "",
+      portion: "",
+      url: "",
       ingredients: [{ name: "", amount: "" }],
     });
   }
