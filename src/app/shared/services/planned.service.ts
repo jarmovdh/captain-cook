@@ -41,6 +41,18 @@ export class PlannedService {
         { name: "Wit Broodje", amount: "1 stuk" },
       ],
     },
+    {
+      id: 3,
+      name: "Beef Burger",
+      portion: "1p",
+      url: "https://images.unsplash.com/photo-1611077854917-291673c6ae06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2371&q=80",
+      ingredients: [
+        { name: "Gehakt", amount: "280 gram" },
+        { name: "Komkommer", amount: "1 stuk" },
+        { name: "Krop Sla", amount: "1 stuk" },
+        { name: "Wit Bolletje", amount: "1 stuk" },
+      ],
+    },
   ];
 
   groceryList = this.plannedMeals.map((entry) => entry.ingredients).flat();
@@ -60,11 +72,15 @@ export class PlannedService {
   updateMeals() {
     this.plannedMeals.push({
       id: Math.random(),
-      name: "",
-      portion: "",
-      url: "",
-      ingredients: [{ name: "", amount: "" }],
-    });
+      name: "test",
+      portion: "test",
+      url: "test",
+      ingredients: [{ name: "test", amount: "test" }],
+    }),
+      this.groceryList.push({
+        name: "TestA",
+        amount: "000 gram",
+      });
   }
 
   constructor() {}

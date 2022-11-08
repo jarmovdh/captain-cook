@@ -1,4 +1,7 @@
 <h1>Lijst</h1>
-<ul *ngFor="let item of ingredients">
-  <li>{{ item.name }} {{ item.amount }}</li>
-</ul>
+<div class="ingredients-list" *ngFor="let item of ingredients">
+  <div>
+    {{ item.amount }}
+  </div>
+  <div>{{ item.name }}</div>
+</div>
